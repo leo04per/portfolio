@@ -8,13 +8,13 @@ import Link from "next/link"
 export function ProjectsSection() {
   const projects = [
     {
-      title: "E-commerce Platform",
+      title: "ON IPVC Development Team",
       description:
-        "Plataforma completa de e-commerce com painel administrativo, sistema de pagamentos e gestão de estoque.",
-      image: "/modern-ecommerce-dashboard.png",
-      technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Tailwind CSS"],
-      github: "https://github.com/usuario/ecommerce",
-      demo: "https://ecommerce-demo.vercel.app",
+        "Worked on the ON IPVC platform with interactive dashboards and data visualization.",
+      image: "/ipvc.jpg",
+      technologies: ["Svelte", "PostgreSQL", "Prisma.io", "Chart.js", "TypeScript"],
+      github: "",
+      demo: "",
       highlights: [
         "Sistema de autenticação completo",
         "Integração com gateway de pagamento",
@@ -23,32 +23,17 @@ export function ProjectsSection() {
       ],
     },
     {
-      title: "Task Management App",
-      description: "Aplicativo de gerenciamento de tarefas com colaboração em tempo real e notificações push.",
-      image: "/task-management-interface.png",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express"],
-      github: "https://github.com/usuario/task-manager",
-      demo: "https://taskmanager-demo.vercel.app",
+      title: "CP Train Tracking - MCP Server",
+      description: "Provide simplified natural language access to real-time data about the national railway network, including train schedules, locations, delays, and disruptions. Integrate easily with MCP-compatible applications to deliver informative and contextual responses. Enable seamless interaction with public API of CP - Comboios de Portugal",
+      image: "/smithery.png",
+      technologies: ["modelcontextprotocol.io", "Python"],
+      github: "https://github.com/leo04per/cp-train-tracking",
+      demo: "https://smithery.ai/server/@leo04per/cp-train-tracking",
       highlights: [
-        "Colaboração em tempo real",
-        "Sistema de notificações",
-        "Drag & drop interface",
-        "Filtros e busca avançada",
-      ],
-    },
-    {
-      title: "Weather Analytics Dashboard",
-      description:
-        "Dashboard analítico para visualização de dados meteorológicos com gráficos interativos e previsões.",
-      image: "/placeholder-x5wsf.png",
-      technologies: ["Vue.js", "Python", "FastAPI", "Chart.js", "PostgreSQL"],
-      github: "https://github.com/usuario/weather-dashboard",
-      demo: "https://weather-analytics.vercel.app",
-      highlights: [
-        "Visualizações interativas",
-        "API de dados meteorológicos",
-        "Previsões baseadas em ML",
-        "Exportação de relatórios",
+        "Integration with public APIs from Comboios Portugal",
+        "Converting natural language into structured queries",
+        "Informative and contextual responses for end users",
+        "Compatibility with MCP clients",
       ],
     },
   ]
@@ -56,10 +41,10 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Projetos em Destaque</h2>
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+        <div className="flex flex-wrap justify-center gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden">
+            <Card key={index} className="overflow-hidden w-full max-w-sm sm:max-w-md">
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src={project.image || "/placeholder.svg"}
@@ -68,20 +53,30 @@ export function ProjectsSection() {
                   className="object-cover transition-transform hover:scale-105"
                 />
               </div>
-              <CardHeader>
+              <CardHeader className="space-y-2">
                 <CardTitle className="flex items-center justify-between">
                   {project.title}
                   <div className="flex gap-2">
-                    <Button size="sm" variant="ghost" asChild>
-                      <Link href={project.github} target="_blank">
-                        <Github className="w-4 h-4" />
-                      </Link>
-                    </Button>
-                    <Button size="sm" variant="ghost" asChild>
-                      <Link href={project.demo} target="_blank">
-                        <ExternalLink className="w-4 h-4" />
-                      </Link>
-                    </Button>
+                    {project.github && /^https?:\/\//.test(project.github) && (
+                      <Button size="sm" variant="ghost" asChild>
+                        <Link href={project.github} target="_blank">
+                          <Github className="w-4 h-4" />
+                        </Link>
+                      </Button>
+                    )}
+                    {project.demo && /^https?:\/\//.test(project.demo) && (
+                      <Button size="sm" variant="ghost" asChild>
+                        <Link href={project.demo} target="_blank">
+                          <ExternalLink className="w-4 h-4" />
+                        </Link>
+                      </Button>
+                    )}
+                    {!((project.github && /^https?:\/\//.test(project.github)) ||
+                      (project.demo && /^https?:\/\//.test(project.demo))) && (
+                      <Badge variant="outline" className="text-[10px] opacity-70">
+                        No link
+                      </Badge>
+                    )}
                   </div>
                 </CardTitle>
                 <CardDescription>{project.description}</CardDescription>
@@ -89,7 +84,7 @@ export function ProjectsSection() {
               <CardContent>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold mb-2">Tecnologias:</h4>
+                    <h4 className="font-semibold mb-2">Tecnologies:</h4>
                     <div className="flex flex-wrap gap-1">
                       {project.technologies.map((tech) => (
                         <Badge key={tech} variant="outline" className="text-xs">
@@ -99,7 +94,7 @@ export function ProjectsSection() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2">Destaques:</h4>
+                    <h4 className="font-semibold mb-2">Highlights:</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
                       {project.highlights.map((highlight, i) => (
                         <li key={i} className="flex items-start gap-2">

@@ -2,11 +2,16 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import './globals.css'
+import { Toaster } from '@/components/ui/toaster'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Lonardo Pereira - Portfolio',
+  description: 'Created by Leonardo Pereira. Presentation the my experiences and works',
+  icons: {
+    icon: '/portfolio.png',
+    shortcut: '/portfolio.png',
+    apple: '/portfolio.png',
+  },
 }
 
 export default function RootLayout({
@@ -25,7 +30,10 @@ html {
 }
         `}</style>
       </head>
-      <body>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        <Toaster />
+      </body>
     </html>
   )
 }

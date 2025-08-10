@@ -4,16 +4,16 @@ import { Database, GitBranch, Globe, Server } from "lucide-react"
 
 export function SkillsSection() {
   const skills = {
-    frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Angular"],
-    backend: ["Node.js", "Python", "Java", "Express", "FastAPI", "Spring Boot"],
-    database: ["PostgreSQL", "MongoDB", "MySQL"],
+    frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Angular", "Svelte"],
+    backend: ["Node.js", "Python", "Java", "Express", "FastAPI", "Spring Boot", "modelcontextprotocol.io", "C", "C#", "Pisma.io"],
+    database: ["PostgreSQL", "MongoDB", "MySQL", "Microsoft SQL Server", "SQLite"],
     tools: ["Git", "Docker", "Figma", "Render"],
   }
 
   return (
     <section id="skills" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Habilidades Técnicas</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Technological Skills</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <Card>
             <CardHeader>
@@ -70,7 +70,7 @@ export function SkillsSection() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <GitBranch className="w-5 h-5" />
-                Ferramentas
+                Tools
               </CardTitle>
             </CardHeader>
             <CardContent>

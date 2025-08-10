@@ -1,5 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Briefcase, Calendar, Code, Globe, GraduationCap, MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
 
 export function AboutSection() {
   return (

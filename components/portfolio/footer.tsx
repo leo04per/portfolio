@@ -5,16 +5,16 @@ export function Footer() {
     <footer className="py-8 border-t">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">© 2024 João Silva. Todos os direitos reservados.</p>
+          <p className="text-sm text-muted-foreground">© 2025 Leonardo Pereira. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="#about" className="text-sm text-muted-foreground hover:text-foreground">
-              Sobre
+              About
             </Link>
             <Link href="#projects" className="text-sm text-muted-foreground hover:text-foreground">
-              Projetos
+              Projects
             </Link>
             <Link href="#contact" className="text-sm text-muted-foreground hover:text-foreground">
-              Contato
+              Contact
             </Link>
           </div>
         </div>

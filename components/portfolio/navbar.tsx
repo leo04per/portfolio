@@ -5,13 +5,13 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
 const navItems = [
-  { name: "Início", href: "#hero" },
-  { name: "Sobre", href: "#about" },
-  { name: "Educação", href: "#education" },
-  { name: "Experiência", href: "#experience" },
-  { name: "Projetos", href: "#projects" },
-  { name: "Habilidades", href: "#skills" },
-  { name: "Contato", href: "#contact" },
+  { name: "Home", href: "#hero" },
+  { name: "About", href: "#about" },
+  { name: "Education", href: "#education" },
+  { name: "Experience", href: "#experience" },
+  { name: "Projects", href: "#projects" },
+  { name: "Skills", href: "#skills" },
+  { name: "Contact", href: "#contact" },
 ]
 
 export function Navbar() {

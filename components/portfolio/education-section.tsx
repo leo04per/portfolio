@@ -24,8 +24,8 @@ export function EducationSection() {
               </div>
               <Separator />
               <div>
-                <h3 className="font-semibold">Escola Secundária de Monção</h3>
-                <p className="text-sm text-muted-foreground">Monção, Viana do Castelo, Portugal</p>
+                <h3 className="font-semibold"> Science and Technology</h3>
+                <p className="text-sm text-muted-foreground">Escola Secundária de Monção</p>
                 <p className="text-sm text-muted-foreground">2019 - 2022</p>
               </div>
             </CardContent>
