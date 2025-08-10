@@ -5,7 +5,7 @@ import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
 
 export const metadata: Metadata = {
-  title: 'Lonardo Pereira - Portfolio',
+  title: 'Leonardo Pereira - Portfolio',
   description: 'Created by Leonardo Pereira. Presentation the my experiences and works',
   icons: {
     icon: '/portfolio.png',
